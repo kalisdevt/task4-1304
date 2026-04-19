@@ -147,7 +147,7 @@ else {
         
         // Вставляем выбранные языки
         foreach ($languages as $lang) {
-            $stmt = $pdo->prepare("SELECT lang_id FROM languages WHERE name = ?");
+            $stmt = $pdo->prepare("SELECT lang_id FROM languages WHERE lang_name = ?");
             $stmt->execute([$lang]);
             $lang_id = $stmt->fetchColumn();
             
