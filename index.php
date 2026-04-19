@@ -141,7 +141,7 @@ else {
         
         // Вставляем заявку
         $stmt = $pdo->prepare("INSERT INTO application (fio, phone_number, email, birth_date, sex, biography) 
-                               VALUES (?, ?, ?, ?, ?, ?, ?)");
+                               VALUES (?, ?, ?, ?, ?, ?)");
         $stmt->execute([$fio, $phone, $email, $birth_date, $gender, $bio]);
         $application_id = $pdo->lastInsertId();
         
