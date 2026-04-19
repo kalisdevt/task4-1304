@@ -8,7 +8,7 @@
 
         body { 
             font-family: "Inter", sans-serif; 
-            max-width: 600px; 
+            max-width: 1200px; 
             margin: 50px auto; 
             padding: 20px;
             background: #f5f5f5;
