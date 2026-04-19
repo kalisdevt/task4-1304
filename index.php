@@ -147,11 +147,11 @@ else {
         
         // Вставляем выбранные языки
         foreach ($languages as $lang) {
-            $stmt = $pdo->prepare("SELECT id FROM languages WHERE name = ?");
+            $stmt = $pdo->prepare("SELECT lang_id FROM languages WHERE name = ?");
             $stmt->execute([$lang]);
             $lang_id = $stmt->fetchColumn();
             
-            $stmt = $pdo->prepare("INSERT INTO application_languages (id, lang_id) VALUES (?, ?)");
+            $stmt = $pdo->prepare("INSERT INTO record_langs (id, lang_id) VALUES (?, ?)");
             $stmt->execute([$application_id, $lang_id]);
         }
         // ========== КОНЕЦ СОХРАНЕНИЯ В БД ==========
